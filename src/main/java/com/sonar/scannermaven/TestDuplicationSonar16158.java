@@ -1,11 +1,9 @@
-package com.sonar.testscannermaven;
+package com.sonar.scannermaven;
 
-import java.awt.SystemTray;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Iterator;
 import java.util.Set;
-import java.util.function.Function;
 import java.util.function.UnaryOperator;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;

@@ -1,4 +1,4 @@
-package com.sonar.testscannermaven;
+package com.sonar.scannermaven;
 
 import java.awt.SystemTray;
 import java.util.Iterator;
