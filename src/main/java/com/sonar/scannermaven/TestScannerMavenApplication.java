@@ -1,4 +1,4 @@
-package com.sonar.testscannermaven;
+package com.sonar.scannermaven;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
