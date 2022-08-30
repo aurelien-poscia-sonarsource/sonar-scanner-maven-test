@@ -9,3 +9,15 @@ flow12
 flow21
 {xoo-end-flow:1:2:1}
 {xoo-end-issue:1}
+
+{xoo-start-issue:2}
+{xoo-start-flow:2:1:1}
+2flow11
+{xoo-end-flow:2:1:1}
+{xoo-start-flow:2:1:2}
+2flow12
+{xoo-end-flow:2:1:2}
+{xoo-start-flow:2:2:1}
+2flow21
+{xoo-end-flow:2:2:1}
+{xoo-end-issue:2}
