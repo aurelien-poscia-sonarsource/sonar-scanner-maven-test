@@ -21,7 +21,7 @@ public class TestDuplicationSonar161582 extends ServletFilter {
 
   private static final Logger LOGGER = LoggerFactory.getLogger(TestDuplicationSonar161582.class);
 
-  String methodA() {
+  String methodAzhserhsrhdrthtrhdhrthrthrthrthrthrthtrmethodAzhserhsrhdrthtrhdhrthrthrthrthrthrthtrmethodAzhserhsrhdrthtrhdhrthrthrthrthrthrthtrmethodAzhserhsrhdrthtrhdhrthrthrthrthrthrthtrmethodAzhserhsrhdrthtrhdhrthrthrthrthrthrthtrmethodAzhserhsrhdrthtrhdhrthrthrthrthrthrthtrmethodAzhserhsrhdrthtrhdhrthrthrthrthrthrthtrmethodAzhserhsrhdrthtrhdhrthrthrthrthrthrthtrmethodAzhserhsrhdrthtrhdhrthrthrthrthrthrthtrmethodAzhserhsrhdrthtrhdhrthrthrthrthrthrthtrmethodAzhserhsrhdrthtrhdhrthrthrthrthrthrthtrmethodAzhserhsrhdrthtrhdhrthrthrthrthrthrthtrmethodAzhserhsrhdrthtrhdhrthrthrthrthrthrthtr() {
     String greetings = "Hellooo 2";
     Set<Integer> range = IntStream.range(1, 1000).mapToObj(i -> i * 2).collect(Collectors.toSet());
     if (System.currentTimeMillis() > System.nanoTime()) {
