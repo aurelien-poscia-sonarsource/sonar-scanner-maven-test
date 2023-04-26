@@ -1,0 +1,175 @@
+﻿{
+  "version": "2.1.0",
+  "$schema": "https://json.schemastore.org/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "tflint",
+          "informationUri": "https://github.com/terraform-linters/tflint",
+          "rules": [
+            {
+              "id": "terraform_standard_module_structure",
+              "shortDescription": {
+                "text": ""
+              },
+              "helpUri": "https://github.com/terraform-linters/tflint-ruleset-terraform/blob/v0.2.2/docs/rules/terraform_standard_module_structure.md"
+            },
+            {
+              "id": "terraform_unused_required_providers",
+              "shortDescription": {
+                "text": ""
+              },
+              "helpUri": "https://github.com/terraform-linters/tflint-ruleset-terraform/blob/v0.2.2/docs/rules/terraform_unused_required_providers.md"
+            }
+          ]
+        }
+      },
+      "results": [
+        {
+          "ruleId": "terraform_standard_module_structure",
+          "level": "warning",
+          "message": {
+            "text": "Module should include a main.tf file as the primary entrypoint"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "main.tf"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "terraform_standard_module_structure",
+          "level": "warning",
+          "message": {
+            "text": "Module should include an empty variables.tf file"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "variables.tf"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "terraform_standard_module_structure",
+          "level": "warning",
+          "message": {
+            "text": "Module should include an empty outputs.tf file"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "outputs.tf"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "terraform_unused_required_providers",
+          "level": "warning",
+          "message": {
+            "text": "provider 'azurerm' is declared in required_providers but not used by the module"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "versions.tf"
+                },
+                "region": {
+                  "startLine": 5,
+                  "startColumn": 5,
+                  "endLine": 8,
+                  "endColumn": 6
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "terraform_unused_required_providers",
+          "level": "warning",
+          "message": {
+            "text": "provider 'random' is declared in required_providers but not used by the module"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "versions.tf"
+                },
+                "region": {
+                  "startLine": 10,
+                  "startColumn": 5,
+                  "endLine": 13,
+                  "endColumn": 6
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "terraform_unused_required_providers",
+          "level": "warning",
+          "message": {
+            "text": "provider 'vault' is declared in required_providers but not used by the module"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "versions.tf"
+                },
+                "region": {
+                  "startLine": 15,
+                  "startColumn": 5,
+                  "endLine": 18,
+                  "endColumn": 6
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tool": {
+        "driver": {
+          "name": "tflint-errors",
+          "informationUri": "https://github.com/terraform-linters/tflint"
+        }
+      },
+      "results": []
+    }
+  ]
+}
+
+
