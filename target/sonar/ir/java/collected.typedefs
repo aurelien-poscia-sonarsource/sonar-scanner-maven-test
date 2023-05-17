@@ -1,0 +1,14 @@
+Ò
+6com.sonar.testscannermaven.TestScannerMavenApplicationJ
+<init>@com.sonar.testscannermaven.TestScannerMavenApplication#<init>()VY
+mainQcom.sonar.testscannermaven.TestScannerMavenApplication#main([Ljava/lang/String;)Vjava.lang.ObjectÍ
+4com.sonar.testscannermaven.TestDuplicationSonar16158H
+<init>>com.sonar.testscannermaven.TestDuplicationSonar16158#<init>()V•
+doFilteròcom.sonar.testscannermaven.TestDuplicationSonar16158#doFilter(Ljavax/servlet/ServletRequest;Ljavax/servlet/ServletResponse;Ljavax/servlet/FilterChain;)Vú
+endpointècom.sonar.testscannermaven.TestDuplicationSonar16158#endpoint(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;)V[
+methodAPcom.sonar.testscannermaven.TestDuplicationSonar16158#methodA()Ljava/lang/String;a
+
+methodAbisScom.sonar.testscannermaven.TestDuplicationSonar16158#methodAbis()Ljava/lang/String;õ
+methodBècom.sonar.testscannermaven.TestDuplicationSonar16158#methodB(Ljava/lang/Iterable;CLjava/util/function/UnaryOperator;Ljava/lang/StringBuilder;)V°
+
+methodBBisícom.sonar.testscannermaven.TestDuplicationSonar16158#methodBBis(Ljava/lang/Iterable;CLjava/util/function/UnaryOperator;Ljava/lang/StringBuilder;)Vorg.sonar.api.web.ServletFilter
