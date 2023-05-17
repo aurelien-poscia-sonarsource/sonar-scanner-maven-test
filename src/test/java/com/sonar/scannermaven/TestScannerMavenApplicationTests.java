@@ -1,8 +1,11 @@
 package com.sonar.scannermaven;
 
+import org.junit.Assert;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
+
+import static org.junit.Assert.assertTrue;
 
 @SpringBootTest
 class TestScannerMavenApplicationTests {
@@ -13,9 +16,13 @@ class TestScannerMavenApplicationTests {
 	@Test
 	void contextLoads() {
 		System.out.println("test");
+		String toto = "toto";
 		// comment
 		boolean condition = true == true;
 		Assertions.assertTrue(condition);
+		Assert.assertEquals("toto", toto);
+		assertTrue(condition);
+
 	}
 
 }
