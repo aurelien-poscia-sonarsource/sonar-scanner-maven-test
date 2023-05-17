@@ -1,2 +1,3 @@
 com/sonar/testscannermaven/TestScannerMavenApplication.class
+com/sonar/testscannermaven/TestScannerMavenApplication2.class
 com/sonar/testscannermaven/TestDuplicationSonar16158.class

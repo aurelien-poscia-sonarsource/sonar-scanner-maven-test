@@ -193,7 +193,10 @@ println(C)java.io.PrintStream#println(C)VK
 writeBytes([B)#java.io.PrintStream#writeBytes([B)VU
 <init>(Ljava/io/OutputStream;)3java.io.PrintStream#<init>(Ljava/io/OutputStream;)V/
 println([C) java.io.PrintStream#println([C)V‹
-9<init>(ZLjava/nio/charset/Charset;Ljava/io/OutputStream;)Njava.io.PrintStream#<init>(ZLjava/nio/charset/Charset;Ljava/io/OutputStream;)V¶
+9<init>(ZLjava/nio/charset/Charset;Ljava/io/OutputStream;)Njava.io.PrintStream#<init>(ZLjava/nio/charset/Charset;Ljava/io/OutputStream;)V‹
+7com.sonar.testscannermaven.TestScannerMavenApplication2java.lang.ObjectM
+<init>()Acom.sonar.testscannermaven.TestScannerMavenApplication2#<init>()Vo
+main([Ljava/lang/String;)Rcom.sonar.testscannermaven.TestScannerMavenApplication2#main([Ljava/lang/String;)V¶
 javax.servlet.Filterjava.lang.Object,
 	destroy()javax.servlet.Filter#destroy()V^
 "init(Ljavax/servlet/FilterConfig;)8javax.servlet.Filter#init(Ljavax/servlet/FilterConfig;)Vî

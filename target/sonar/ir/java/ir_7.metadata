@@ -1,11 +1,11 @@
-com.sonar.testscannermaven.TestDuplicationSonar16158#methodBBis(Ljava/lang/Iterable;CLjava/util/function/UnaryOperator;Ljava/lang/StringBuilder;)V
+com.sonar.testscannermaven.TestDuplicationSonar16158#methodAbis()Ljava/lang/String;
 java.lang.System#nanoTime()J
+java.util.stream.IntStream#range(II)Ljava/util/stream/IntStream;
 java.lang.IllegalStateException#<init>()V
-java.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 java.lang.IllegalStateException#instance-init#
-java.lang.String#equals(Ljava/lang/Object;)Z
-java.lang.StringBuilder#append(J)Ljava/lang/StringBuilder;
-java.lang.StringBuilder#append(C)Ljava/lang/StringBuilder;
+java.util.stream.Collectors#toSet()Ljava/util/stream/Collector;
 java.lang.RuntimeException#<init>()V
+java.lang.IllegalStateException#<init>(Ljava/lang/String;)V
 java.lang.System#currentTimeMillis()J
+java.lang.System#getenv()Ljava/util/Map;
 java.lang.RuntimeException#instance-init#

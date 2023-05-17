@@ -1,4 +1,4 @@
-com.sonar.testscannermaven.TestDuplicationSonar16158#methodAbis()Ljava/lang/String;
+com.sonar.testscannermaven.TestDuplicationSonar16158#methodA()Ljava/lang/String;
 java.lang.System#nanoTime()J
 java.util.stream.IntStream#range(II)Ljava/util/stream/IntStream;
 java.lang.IllegalStateException#<init>()V

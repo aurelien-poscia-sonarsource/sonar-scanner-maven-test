@@ -1,4 +1,4 @@
-com.sonar.testscannermaven.TestDuplicationSonar16158#methodB(Ljava/lang/Iterable;CLjava/util/function/UnaryOperator;Ljava/lang/StringBuilder;)V
+com.sonar.testscannermaven.TestDuplicationSonar16158#methodBBis(Ljava/lang/Iterable;CLjava/util/function/UnaryOperator;Ljava/lang/StringBuilder;)V
 java.lang.System#nanoTime()J
 java.lang.IllegalStateException#<init>()V
 java.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;

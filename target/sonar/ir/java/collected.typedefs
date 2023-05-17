@@ -1,7 +1,10 @@
 ñ
 6com.sonar.testscannermaven.TestScannerMavenApplicationJ
 <init>@com.sonar.testscannermaven.TestScannerMavenApplication#<init>()VY
-mainQcom.sonar.testscannermaven.TestScannerMavenApplication#main([Ljava/lang/String;)Vjava.lang.Objectê
+mainQcom.sonar.testscannermaven.TestScannerMavenApplication#main([Ljava/lang/String;)Vjava.lang.Objectô
+7com.sonar.testscannermaven.TestScannerMavenApplication2K
+<init>Acom.sonar.testscannermaven.TestScannerMavenApplication2#<init>()VZ
+mainRcom.sonar.testscannermaven.TestScannerMavenApplication2#main([Ljava/lang/String;)Vjava.lang.Objectê
 4com.sonar.testscannermaven.TestDuplicationSonar16158H
 <init>>com.sonar.testscannermaven.TestDuplicationSonar16158#<init>()V¥
 doFilter˜com.sonar.testscannermaven.TestDuplicationSonar16158#doFilter(Ljavax/servlet/ServletRequest;Ljavax/servlet/ServletResponse;Ljavax/servlet/FilterChain;)Vœ

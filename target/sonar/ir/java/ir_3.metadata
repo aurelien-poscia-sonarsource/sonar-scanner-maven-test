@@ -1,11 +1,2 @@
-com.sonar.testscannermaven.TestDuplicationSonar16158#methodA()Ljava/lang/String;
-java.lang.System#nanoTime()J
-java.util.stream.IntStream#range(II)Ljava/util/stream/IntStream;
-java.lang.IllegalStateException#<init>()V
-java.lang.IllegalStateException#instance-init#
-java.util.stream.Collectors#toSet()Ljava/util/stream/Collector;
-java.lang.RuntimeException#<init>()V
-java.lang.IllegalStateException#<init>(Ljava/lang/String;)V
-java.lang.System#currentTimeMillis()J
-java.lang.System#getenv()Ljava/util/Map;
-java.lang.RuntimeException#instance-init#
+com.sonar.testscannermaven.TestScannerMavenApplication2#main([Ljava/lang/String;)V
+org.springframework.boot.SpringApplication#run(Ljava/lang/Class;[Ljava/lang/String;)Lorg/springframework/context/ConfigurableApplicationContext;
