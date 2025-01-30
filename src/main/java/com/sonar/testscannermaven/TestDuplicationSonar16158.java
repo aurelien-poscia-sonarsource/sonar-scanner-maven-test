@@ -126,6 +126,9 @@ public class TestDuplicationSonar16158 extends ServletFilter {
     }
   }
 
+  private void unusedMethod(String unused) {
+  }
+
   @Override
   public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
     String data        = servletRequest.getParameter("input");
