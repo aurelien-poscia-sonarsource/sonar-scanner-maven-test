@@ -1,0 +1,52 @@
+name: Call Endpoint with WIF JWT
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch: # Allows manual triggering
+
+# 1. CRITICAL: You must grant the workflow permission to request the OIDC token.
+permissions:
+  id-token: write # Required for fetching the OIDC JWT
+  contents: read  # Required for standard checkout actions
+
+jobs:
+  call-custom-endpoint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      # 2. Fetch the OIDC Token using github-script
+      - name: Fetch OIDC Token
+        id: fetch-token
+        uses: actions/github-script@v7
+        with:
+          script: |
+            // Replace 'your-custom-audience' with the audience Endpoint X expects
+            const audience = 'your-custom-audience'; 
+            
+            // Fetch the JWT from the GitHub OIDC provider
+            const idToken = await core.getIDToken(audience);
+            
+            // Mask the token so it isn't accidentally printed in plain text in the logs
+            core.setSecret(idToken);
+            
+            // Output the token for the next steps to use
+            core.setOutput('jwt', idToken);
+
+      # 3. Call Endpoint X with the JWT
+      - name: Call Endpoint X
+        env:
+          ENDPOINT_URL: "https://api.yourdomain.com/x"
+          JWT: ${{ steps.fetch-token.outputs.jwt }}
+        run: |
+          echo "Calling endpoint..."
+          
+          # Use curl to call the endpoint, passing the JWT in the Authorization header
+          curl -X POST "$ENDPOINT_URL" \
+            -H "Authorization: Bearer $JWT" \
+            -H "Content-Type: application/json" \
+            -d '{"trigger": "github_actions", "repository": "${{ github.repository }}"}' \
+            --fail-with-body # Ensures curl fails the step if the API returns a 4xx/5xx error
