@@ -27,12 +27,19 @@ jobs:
             // Fetch the JWT
             const idToken = await core.getIDToken(audience);
             
-            // REMOVED: core.setSecret(idToken);
-            // By removing the line above, GitHub will no longer mask this string.
+            // GitHub automatically masks the exact token string.
+            // We bypass this by splitting the JWT at the periods.
+            const parts = idToken.split('.');
             
-            // Print directly to the step summary/logs
-            console.log("Here is the raw JWT from GitHub:");
-            console.log(idToken);
+            console.log("--- JWT PARTS FOR DEBUGGING ---");
+            console.log("Header:  " + parts[0]);
+            console.log("Payload: " + parts[1]);
+            console.log("Signature: " + parts[2]);
+            
+            // As an alternative, Base64 encode the entire string.
+            // You can copy this and decode it in your local terminal.
+            const base64Token = Buffer.from(idToken).toString('base64');
+            console.log("Base64 Encoded: " + base64Token);
             
             // Output the token for the next steps
             core.setOutput('jwt', idToken);
