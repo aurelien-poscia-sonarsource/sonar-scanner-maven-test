@@ -1,15 +1,14 @@
-name: Call Endpoint with WIF JWT
+name: Call Endpoint with WIF JWT (Debug Mode)
 
 on:
   push:
     branches:
       - main
-  workflow_dispatch: # Allows manual triggering
+  workflow_dispatch: 
 
-# 1. CRITICAL: You must grant the workflow permission to request the OIDC token.
 permissions:
-  id-token: write # Required for fetching the OIDC JWT
-  contents: read  # Required for standard checkout actions
+  id-token: write 
+  contents: read  
 
 jobs:
   call-custom-endpoint:
@@ -18,35 +17,37 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      # 2. Fetch the OIDC Token using github-script
       - name: Fetch OIDC Token
         id: fetch-token
         uses: actions/github-script@v7
         with:
           script: |
-            // Replace 'your-custom-audience' with the audience Endpoint X expects
             const audience = 'your-custom-audience'; 
             
-            // Fetch the JWT from the GitHub OIDC provider
+            // Fetch the JWT
             const idToken = await core.getIDToken(audience);
             
-            // Mask the token so it isn't accidentally printed in plain text in the logs
-            core.setSecret(idToken);
+            // REMOVED: core.setSecret(idToken);
+            // By removing the line above, GitHub will no longer mask this string.
             
-            // Output the token for the next steps to use
+            // Print directly to the step summary/logs
+            console.log("Here is the raw JWT from GitHub:");
+            console.log(idToken);
+            
+            // Output the token for the next steps
             core.setOutput('jwt', idToken);
 
-      # 3. Call Endpoint X with the JWT
       - name: Call Endpoint X
         env:
           ENDPOINT_URL: "https://api.yourdomain.com/x"
           JWT: ${{ steps.fetch-token.outputs.jwt }}
         run: |
-          echo "Calling endpoint..."
+          # Print the token from the bash environment
+          echo "Token in bash environment: $JWT"
           
-          # Use curl to call the endpoint, passing the JWT in the Authorization header
+          echo "Calling endpoint..."
           curl -X POST "$ENDPOINT_URL" \
             -H "Authorization: Bearer $JWT" \
             -H "Content-Type: application/json" \
             -d '{"trigger": "github_actions", "repository": "${{ github.repository }}"}' \
-            --fail-with-body # Ensures curl fails the step if the API returns a 4xx/5xx error
+            --fail-with-body
